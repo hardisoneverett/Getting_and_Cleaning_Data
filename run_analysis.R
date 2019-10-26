@@ -10,7 +10,7 @@ testdata<-cbind(x_test, y_test, subject_test)
 
 # Read in the training data files 
 x_train<-read.table(paste0(dir,"/train/X_train.txt"), col.names = names[,2])
-y_train<-read.table(paste0(dir,"/train/y_train.txt"), col.names = "activity", colClasses = "character")
+y_train<-read.table(paste0(dir,"/train/y_train.txt"), col.names = "activity", colClasses = "numeric")
 subject_train<-read.table(paste0(dir,"/train/subject_train.txt"), col.names = "subject")
 traindata<-cbind(x_train, y_train, subject_train)
 
