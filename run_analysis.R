@@ -1,17 +1,16 @@
 library(dplyr)
-dir<-"/UCI_HAR_Dataset"
-names<-read.table(paste0(dir,"/features.txt"))
+names<-read.table("UCI_HAR_Dataset/features.txt")
 
 # Read in the test data files
-x_test<-read.table(paste0(dir,"/test/X_test.txt"), col.names = names[,2])
-y_test<-read.table(paste0(dir,"/test/y_test.txt"), col.names = "activity", colClasses = "numeric")
-subject_test<-read.table(paste0(dir,"/test/subject_test.txt"), col.names = "subject")
+x_test<-read.table("UCI_HAR_Dataset/test/X_test.txt", col.names = names[,2])
+y_test<-read.table("UCI_HAR_Dataset/test/y_test.txt", col.names = "activity", colClasses = "numeric")
+subject_test<-read.table("UCI_HAR_Dataset/test/subject_test.txt", col.names = "subject")
 testdata<-cbind(x_test, y_test, subject_test)
 
 # Read in the training data files 
-x_train<-read.table(paste0(dir,"/train/X_train.txt"), col.names = names[,2])
-y_train<-read.table(paste0(dir,"/train/y_train.txt"), col.names = "activity", colClasses = "numeric")
-subject_train<-read.table(paste0(dir,"/train/subject_train.txt"), col.names = "subject")
+x_train<-read.table("UCI_HAR_Dataset/train/X_train.txt", col.names = names[,2])
+y_train<-read.table("UCI_HAR_Dataset/train/y_train.txt", col.names = "activity", colClasses = "numeric")
+subject_train<-read.table("UCI_HAR_Dataset/train/subject_train.txt", col.names = "subject")
 traindata<-cbind(x_train, y_train, subject_train)
 
 #Combine the test and train data into a single table
