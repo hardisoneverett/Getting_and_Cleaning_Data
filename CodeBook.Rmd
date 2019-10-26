@@ -1,17 +1,17 @@
 CodeBook
 
-names: reads in the variable names from the features.txt file and stores them.
-x_test: reads in the measurement data from the X_test.txt file as a table and adds column names from the names variable.
-y_test: reads in the activity data from the y_test.txt file as a table and adds the variable name "activity".
+names:        reads in the variable names from the features.txt file and stores them.
+x_test:       reads in the measurement data from the X_test.txt file as a table and adds column names from the names variable.
+y_test:       reads in the activity data from the y_test.txt file as a table and adds the variable name "activity".
 subject_test: reads in the subject data from the subject_test.tx file as a table and adds the variable name "subject".
-testdata: combines x_test, y_test, and subject_test into a single table using cbind.
-x_train: reads in the measurement data from the X_train.txt file as a table and adds column names from the names variable.
-y_train: reads in the activity data from the y_train.txt file as a table and adds the variable name "activity".
+testdata:     combines x_test, y_test, and subject_test into a single table using cbind.
+x_train:      reads in the measurement data from the X_train.txt file as a table and adds column names from the names variable.
+y_train:      reads in the activity data from the y_train.txt file as a table and adds the variable name "activity".
 subject_train: reads in the subject data from the subject_train.txt file as a table and adds the variable name "subject".
-traindata: combines x_train, y_train, and subject_train into a single table using cbind.
-data: combines testdata and traindata into a single table using rbind.
-tidy_data: The activity, subject, and any column names containing "mean" or "std" are selected from the data data.frame.  Then the             activity column is recoded with the descriptive labels from activity_labels.txt file.
-avg_tidy_data: The tidy_data data.frame is grouped by activity and subject.  The measurement variables are then summarized                    using the mean() function.
+traindata:    combines x_train, y_train, and subject_train into a single table using cbind.
+data:         combines testdata and traindata into a single table using rbind.
+tidy_data:    The activity, subject, and any column names containing "mean" or "std" are selected from the data data.frame.  Then               the activity column is recoded with the descriptive labels from activity_labels.txt file.
+avg_tidy_data: The tidy_data data.frame is grouped by activity and subject.  The measurement variables are then summarized                      using the mean() function.
 
 Below is the features info from the UCI_HAR dataset.  
 
